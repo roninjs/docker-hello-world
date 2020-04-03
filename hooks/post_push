@@ -1,5 +1,5 @@
 #!/bin/bash
-echo -e "\e[45m---------------------------"
-echo -e "\e[95mThis is the post-push test"
-echo -e "\e[45m---------------------------"
+echo -e "---------------------------"
+echo -e "This is the post-push test"
+echo -e "---------------------------"
 exit 0

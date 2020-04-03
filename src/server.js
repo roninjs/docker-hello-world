@@ -16,6 +16,7 @@ function stopServer() {
 }
 
 process.on( 'SIGINT', stopServer )
+
 process.on( 'SIGTERM', stopServer )
 
 const server = app.listen(port, function() {

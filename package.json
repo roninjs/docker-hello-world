@@ -1,0 +1,17 @@
+{
+  "name": "docker-hello-world",
+  "private": true,
+  "version": "1.0.0",
+  "description": "",
+  "author": "Peter McKee <peter.mckee@docker.com>",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "nodemon src/server.js"
+  },
+  "dependencies": {
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.2"
+  }
+}

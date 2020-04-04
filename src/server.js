@@ -16,13 +16,15 @@ function stopServer() {
 }
 
 process.on( 'SIGINT', stopServer )
-
 process.on( 'SIGTERM', stopServer )
 
 const server = app.listen(port, function() {
   console.log( `Listening on port: ${port}` )
 })
 
+// This is somewhat of a hack and should be 
+// handle better in a production server.
+server.on( 'connection', socket => socket.unref() )
 
 
 app.use( require( './routes.js' ) )

@@ -1,6 +1,3 @@
-services:
-  sut:
-    build:
-      context: .
-      dockerfile: Dockerfile.test
-    command: echo "Branch $SOURCE_BRANCH, Test OK"
+sut:
+  build: .
+  command: npm run test

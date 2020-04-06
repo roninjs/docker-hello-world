@@ -1,6 +1,6 @@
 FROM node:lts
 
-ARG NODE_ENV=production
+ARG NODE_ENV=test
 ENV NODE_ENV $NODE_ENV
 
 WORKDIR /code

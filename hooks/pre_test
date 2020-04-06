@@ -1,5 +1,0 @@
-#!/bin/bash
-echo -e "---------------------------"
-echo -e "This is the pre-test test"
-echo -e "---------------------------"
-exit 0

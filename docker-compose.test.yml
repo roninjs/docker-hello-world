@@ -1,3 +1,8 @@
-sut:
-  build: .
-  command: echo "Branch $SOURCE_BRANCH, Test OK"
+version: "3.7"
+
+services:
+  sut:
+    build:
+      context: .
+      dockerfile: Dockerfile.test
+    command: echo "Branch $SOURCE_BRANCH, Test OK"

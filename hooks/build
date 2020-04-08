@@ -4,8 +4,8 @@ ENVIRONMENT=$(echo $DOCKER_TAG | cut -d "-" -f1)
 
 if [ $DOCKER_TAG == "latest" ]
 then
-  echo -e "building image using PORT: $PORT_PROD"
-  docker build --build-arg PORT=$PORT_PROD -f $DOCKERFILE_PATH -t $IMAGE_NAME .
+  echo -e "building image using PORT: $PORT"
+  docker build --build-arg PORT=$PORT -f $DOCKERFILE_PATH -t $IMAGE_NAME .
 else
   echo -e "building image using PORT: $PORT_STAGE"
   docker build --build-arg PORT=$PORT_STAGE -f $DOCKERFILE_PATH -t $IMAGE_NAME .

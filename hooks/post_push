@@ -1,5 +1,4 @@
 #!/bin/bash
-echo -e "---------------------------"
-echo -e "This is the post-push test"
-echo -e "---------------------------"
-exit 0
+
+docker tag $IMAGE_NAME $DOCKER_REPO:$SOURCE_COMMIT
+docker push $DOCKER_REPO:$SOURCE_COMMIT

@@ -2,6 +2,10 @@
 
 ENVIRONMENT=$(echo $DOCKER_TAG | cut -d "-" -f1)
 
+DOCKER_VERSOIN = $(docker -v)
+
+echo -e "$DOCKER_VERSOIN"
+
 if [ $DOCKER_TAG == "latest" ]
 then
   echo -e "building image using PORT: $PORT"

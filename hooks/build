@@ -2,9 +2,9 @@
 
 ENVIRONMENT=$(echo $DOCKER_TAG | cut -d "-" -f1)
 
-DOCKER_VERSOIN = $(docker -v)
+SERVER_VERSION=$(docker version -f "{{.Server.Version}}")
 
-echo -e "$DOCKER_VERSOIN"
+echo -e "$SERVER_VERSION"
 
 if [ $DOCKER_TAG == "latest" ]
 then

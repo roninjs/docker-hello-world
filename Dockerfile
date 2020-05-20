@@ -2,7 +2,8 @@ FROM node:12.16.3
 
 WORKDIR /code
 
-ENV PORT 80
+ARG PORT=80
+ENV PORT $PORT
 
 COPY package.json /code/package.json
 
